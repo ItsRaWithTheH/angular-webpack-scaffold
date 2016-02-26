@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+  "globals": {
+    "jQuery": true,
+    "moment": true,
+    "expect": true,
+    "inject": true,
+    "_": true
+  },
+  "rules": {
+  }
+}
