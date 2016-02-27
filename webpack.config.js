@@ -25,10 +25,12 @@ module.exports = function makeWebpackConfig () {
     config.entry = {};
   } else if (ENV === 'dev') {
     config.entry = {
+      vendor: APP + '/core/vendor.js',
       app: ['webpack/hot/dev-server', APP + '/core/bootstrap.js']
     };
   } else {
     config.entry = {
+      vendor: APP + '/core/vendor.js',
       app: APP + '/core/bootstrap.js'
     };
   }
@@ -128,6 +130,7 @@ module.exports = function makeWebpackConfig () {
         inject: 'body'
       }),
       new ExtractTextPlugin('[name].[hash].css'),
+      new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
       new webpack.HotModuleReplacementPlugin()
     );
   } else {
@@ -137,7 +140,18 @@ module.exports = function makeWebpackConfig () {
         inject: 'body'
       }),
       new ExtractTextPlugin('[name].[hash].css'),
-      new webpack.optimize.DedupePlugin()
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          dead_code: false,
+          conditionals: false,
+          unused: false
+        },
+        mangle: {
+          except: ['$', 'exports', 'require']
+        }
+      })
     );
   }
 

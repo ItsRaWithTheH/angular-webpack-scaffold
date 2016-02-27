@@ -4,10 +4,10 @@
   "description": "New Frontend",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf build && webpack --bail --progress --profile",
+    "build": "rimraf build && webpack --bail --progress --colors --profile",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "dev": "node_modules/.bin/webpack-dev-server --history-api-fallback --inline --colors --hot",
+    "dev": "node_modules/.bin/webpack-dev-server --history-api-fallback --inline --progress --colors --hot",
     "start-win": "node_modules\\.bin\\webpack-dev-server.cmd -—content-base app --hot"
   },
   "author": "",

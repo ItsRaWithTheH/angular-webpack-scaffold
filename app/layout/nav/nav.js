@@ -7,7 +7,7 @@ class NavCtrl {
   constructor ($log) {
     this.$log = $log;
     this.items = ['one', 'two'];
-    this.$log.info(this.items);
+    $log.info(this.items);
   }
 }
 /* @ngInject */
@@ -20,10 +20,9 @@ export default angular.module('app.layout.nav', [])
     controller: NavCtrl,
     controllerAs: 'nav',
     bindToController: true,
-    link: function (nav) {
-      console.log(nav);
-      console.log($log);
-      $log(nav.items);
+    link: function (scope, elem, attrs, ctrl) {
+      $log.info(scope.nav.items); //works but is clunky
+      $log.info(ctrl.items); //better way to access items
     }
   }
 

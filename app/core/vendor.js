@@ -1,4 +1,4 @@
-module.exports = function () {
+// module.exports = function () {
   /* Styles */
   require('../index.scss');
   require('../pigments/pigments.scss'); //replace with external pigments after
@@ -8,4 +8,4 @@ module.exports = function () {
   require('velocity-animate');
   require('angular');
   global.moment = require('moment');
-};
+// };
