@@ -1,0 +1,16 @@
+{
+  "name": "pigments",
+  "version": "0.1.0",
+  "description": "Cota style components library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deep Shah, Rahul Mahida",
+  "license": "ISC",
+  "dependencies": {
+    "bourbon": "^4.2.6",
+    "node-bourbon": "^4.2.3",
+    "sass-flex-mixin": "^1.0.0"
+  }
+}

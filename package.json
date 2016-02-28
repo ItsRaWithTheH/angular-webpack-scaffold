@@ -7,7 +7,7 @@
     "build": "rimraf build && webpack --bail --progress --colors --profile",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "dev": "node_modules/.bin/webpack-dev-server --history-api-fallback --inline --progress --colors --hot",
+    "dev": "node_modules/.bin/webpack-dev-server --history-api-fallback --display-error-details --inline --progress --colors --hot",
     "start-win": "node_modules\\.bin\\webpack-dev-server.cmd -—content-base app --hot"
   },
   "author": "",
@@ -59,7 +59,6 @@
     "lodash": "^4.1.0",
     "mdi": "^1.4.57",
     "moment": "^2.11.1",
-    "node-lumx": "^1.0.0",
     "node-reset-scss": "^1.0.1",
     "raw-loader": "^0.5.1",
     "velocity-animate": "^1.2.3"

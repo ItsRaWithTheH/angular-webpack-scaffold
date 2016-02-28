@@ -1,0 +1,6 @@
+@import "~pigments/core/core.scss";
+@import "~pigments/layout/layout.scss";
+
+div.main {
+  @include flexbox();
+}

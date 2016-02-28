@@ -6,7 +6,7 @@ const webpack = require('webpack')
 ,     ExtractTextPlugin = require('extract-text-webpack-plugin')
 ,     CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const ROOT = __dirname
+const ROOT = path.resolve(__dirname)
 ,     APP = ROOT + '/app'
 ,     BUILD = ROOT + '/build';
 
@@ -16,7 +16,15 @@ module.exports = function makeWebpackConfig () {
   /**
   *Config
   */
-  var config = {};
+  var config = {
+    resolve: {
+      root: ROOT,
+      modulesDirectories: ['node_modules', 'temp_modules'],
+      alias: {
+        app: APP
+      }
+    }
+  };
 
   /**
   *Entry
