@@ -1,9 +1,13 @@
 'use strict';
 
-var angular = require('angular');
+import angular from 'angular';
 
+/**
+* @name NavController
+* @description Controller to handle view logic for the appNav (app-nav) directive
+*/
 /* @ngInject */
-class NavCtrl {
+class NavController {
   constructor ($log) {
     this.$log = $log;
     this.items = ['one', 'two'];
@@ -17,7 +21,7 @@ export default angular.module('app.layout.nav', [])
   return {
     resrict: 'E',
     template: require('./nav.html'),
-    controller: NavCtrl,
+    controller: NavController,
     controllerAs: 'nav',
     bindToController: true,
     link: function (scope, elem, attrs, ctrl) {

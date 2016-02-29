@@ -33,13 +33,13 @@ module.exports = function makeWebpackConfig () {
     config.entry = {};
   } else if (ENV === 'dev') {
     config.entry = {
-      vendor: APP + '/core/vendor.js',
-      app: ['webpack/hot/dev-server', APP + '/core/bootstrap.js']
+      vendor: APP + '/init/vendor.js',
+      app: ['webpack/hot/dev-server', APP + '/init/bootstrap.js']
     };
   } else {
     config.entry = {
-      vendor: APP + '/core/vendor.js',
-      app: APP + '/core/bootstrap.js'
+      vendor: APP + '/init/vendor.js',
+      app: APP + '/init/bootstrap.js'
     };
   }
 

@@ -1,12 +1,12 @@
 'use strict';
 
 require('angular-ui-router');
-require('./services/services');
+require('./shared/shared');
 require('./layout/layout');
 
 module.exports = angular.module('app', [
   'ui.router',
-  'app.services',
+  'app.shared',
   'app.layout'
 ]).config([
   '$urlRouterProvider',
