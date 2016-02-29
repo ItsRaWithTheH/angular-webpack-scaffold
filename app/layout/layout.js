@@ -1,6 +1,6 @@
 'use strict';
 
-require('angular-ui-router');
+// require('angular-ui-router');
 require('./nav/nav');
 require('./layout.scss');
 

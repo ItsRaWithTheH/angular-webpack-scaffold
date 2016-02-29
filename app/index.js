@@ -7,10 +7,13 @@ require('./layout/layout');
 module.exports = angular.module('app', [
   'ui.router',
   'app.shared',
-  'app.layout'
+  'app.layout',
+
+  'app.core',
+  'app.componenets'
 ]).config([
   '$urlRouterProvider',
   function ($urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/'); //TODO: move out of main index.js and into core module
   }
 ]);
