@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "bourbon": "^4.2.6",
-    "node-bourbon": "^4.2.3",
-    "sass-flex-mixin": "^1.0.0"
+    "node-bourbon": "^4.2.3"
   }
 }
