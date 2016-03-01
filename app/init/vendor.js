@@ -7,4 +7,5 @@
   require('velocity-animate');
   require('angular');
   global.moment = require('moment');
+  require('angular-formly');
 // };

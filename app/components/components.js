@@ -2,4 +2,8 @@
 
 import angular from 'angular';
 
-export default angular.module('app.components', []);
+require('./formly-test/formly-test');
+
+export default angular.module('app.components', [
+  'app.components.formlyTest'
+]);

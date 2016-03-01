@@ -3,6 +3,8 @@
 require('angular-ui-router');
 require('./shared/shared');
 require('./layout/layout');
+require('./core/core');
+require('./components/components');
 
 module.exports = angular.module('app', [
   'ui.router',
@@ -10,7 +12,7 @@ module.exports = angular.module('app', [
   'app.layout',
 
   'app.core',
-  'app.componenets'
+  'app.components'
 ]).config([
   '$urlRouterProvider',
   function ($urlRouterProvider) {
