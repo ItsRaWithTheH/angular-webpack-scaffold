@@ -6,17 +6,16 @@ export class FormlyTestService {
     return {
       fields: [
         {
-          // this field's ng-model will be bound to vm.model.username
-          key: 'username',
+          key: 'prop1',
           type: 'input'
         },
         {
-          key: 'name.first',
+          key: 'prop1.subprop1',
           type: 'input'
         },
         {
-          key: 'name.last',
-          type: 'input'
+          key: 'prop1.subprop2',
+          type: 'number'
         }
       ]
     };

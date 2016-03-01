@@ -9,11 +9,13 @@ import {FormlyTestService} from './formly-test_service';
 /* @ngInject */
 class FormlyTestController {
   constructor ($log, formlyTestSvc) {
-    $log.info('in state formly');
-    $log.info('formlyTestSvc - getConfig', formlyTestSvc.getConfig());
-
+    this.model = {};
     this.formlyConfig = formlyTestSvc.getConfig();
 
+  }
+
+  onSubmit () {
+    $log.debug(this.model);
   }
 }
 
@@ -34,7 +36,8 @@ export default angular.module('app.components.formlyTest', [
           template: require('app/layout/layout-two-col.html')
         }
       },
-      controller: FormlyTestController
+      controller: FormlyTestController,
+      controllerAs: 'formlyTest'
     })
   }
 ])
