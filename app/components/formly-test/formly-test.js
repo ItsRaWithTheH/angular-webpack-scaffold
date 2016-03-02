@@ -1,7 +1,8 @@
 'use strict';
 
 import angular from 'angular';
-
+import 'angular-formly-templates-lumx/dist/formlyLumx';
+import 'angular-formly-templates-lumx/dist/formlyLumx.css';
 import './formly-test.scss';
 import {FormlyTestService} from './formly-test_service';
 
@@ -21,7 +22,8 @@ class FormlyTestController {
 
 /* @ngInject */
 export default angular.module('app.components.formlyTest', [
-  'formly'
+  'formly',
+  'formlyLumx'
 ])
 .config([
   '$stateProvider',
