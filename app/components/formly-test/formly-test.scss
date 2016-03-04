@@ -1,2 +1,23 @@
+@import "~pigments/core/core.scss";
+
 .component-formly-test {
+  form {
+    margin: 20px;
+  }
+
+  //Move these classes into pigments layout
+  .display-flex {
+    @include align-items(stretch);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+  }
+
+  .flex-1 {
+    @include flex(1);
+  }
+
+  .flex-2 {
+    @include flex(2);
+  }
 }
