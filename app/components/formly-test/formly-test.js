@@ -10,12 +10,16 @@ import {FormlyTestService} from './formly-test_service';
 class FormlyTestController {
   constructor ($log, formlyTestSvc) {
     this.model = {};
+    this.formOptions = {};
+    $log.debug('form config', formlyTestSvc.getConfig());
     this.formlyConfig = formlyTestSvc.getConfig();
+    this.originalFields = angular.copy(this.formlyConfig.fields);
 
+    this.$log = $log;
   }
 
   onSubmit () {
-    $log.debug(this.model);
+    this.$log.debug(this.model);
   }
 }
 
@@ -30,14 +34,15 @@ export default angular.module('app.components.formlyTest', [
       url: 'formly',
       views: {
         '@main.formly': {
-          template: require('./formly-test.html')
+          template: require('./formly-test.html'),
+          controller: FormlyTestController,
+          controllerAs: 'formlyTest',
+          bindToController: true
         },
         'layout@main': {
           template: require('app/layout/layout-two-col.html')
         }
-      },
-      controller: FormlyTestController,
-      controllerAs: 'formlyTest'
+      }
     })
   }
 ])

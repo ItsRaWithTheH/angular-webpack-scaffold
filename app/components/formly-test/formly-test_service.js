@@ -7,15 +7,24 @@ export class FormlyTestService {
       fields: [
         {
           key: 'prop1',
-          type: 'input'
+          type: 'input',
+          templateOptions: {
+            label: 'property 1'
+          }
         },
         {
-          key: 'prop1.subprop1',
-          type: 'input'
+          key: 'prop2.subprop1',
+          type: 'input',
+          templateOptions: {
+            label: 'property 2'
+          }
         },
         {
-          key: 'prop1.subprop2',
-          type: 'number'
+          key: 'prop2.subprop2',
+          type: 'input',
+          templateOptions: {
+            label: 'property 3'
+          }
         }
       ]
     };

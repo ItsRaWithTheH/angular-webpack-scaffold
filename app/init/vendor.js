@@ -8,4 +8,5 @@
   require('angular');
   global.moment = require('moment');
   require('angular-formly');
+  require('angular-formly-templates-bootstrap');
 // };

@@ -1,5 +1,23 @@
 <div class="component component-formly-test">
   New Formly Test
-  <form name="formly-test" novalidate>
+  <form name="formlyTest.form" ng-submit="formlyTest.onSubmit()">
+    <formly-form
+    model="formlyTest.model"
+    fields="formlyTest.formlyConfig.fields"
+    options="formlyTest.formOptions"
+    form="formlyTest.form">
+      <button type="submit" ng-disabled="formlyTest.form.$invalid">Submit</button>
+      <button type="button" ng-click="formlyTest.options.resetModel()">Reset</button>
+    </formly-form>
   </form>
+  <br />
+  <h4>Model Data</h4>
+  <pre>
+    {{formlyTest.model | json}}
+  </pre>
+
+  <h4>Form Data</h4>
+  <pre>
+    {{formlyTest.form | json}}
+  </pre>
 </div>
