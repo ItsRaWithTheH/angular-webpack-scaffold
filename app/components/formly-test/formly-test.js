@@ -78,6 +78,38 @@ class FormlyTestController {
   onSubmit () {
     this.$log.debug(this.model);
   }
+
+  updateOptions () {
+    let configOverride = [
+      {
+        key: 'prop4',
+        templateOptions: {
+          options: [
+            {
+              name: 'newData',
+              value: 'newValue'
+            },
+            {
+              name: 'newData2',
+              value: 'newValue2'
+            }
+          ]
+        }
+      }
+    ];
+
+    this.formlyConfig.fields = _(this.formlyConfig.fields)
+    .map(function (field) {
+      let override = _.find(configOverrides, {key: field.key});
+      if (override) {
+        field = deepMerge(field, override);
+      }
+      return field;
+    })
+    .value();
+
+    return this.formlyConfig;
+  }
 }
 
 /* @ngInject */

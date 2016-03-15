@@ -10,6 +10,11 @@ export default angular.module('app.shared.formly.templates.types', [])
       name: 'input',
       template: require('./input.html'),
       wrapper: ['label', 'error']
+    },
+    {
+      name: 'dropdown',
+      template: require('./dropdown.html'),
+      wrapper: ['label', 'error']
     }
   ]);
 });

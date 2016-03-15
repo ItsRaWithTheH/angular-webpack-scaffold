@@ -25,6 +25,23 @@ export class FormlyTestService {
           templateOptions: {
             label: 'property 3'
           }
+        },
+        {
+          key: 'prop4',
+          type: 'dropdown',
+          templateOptions: {
+            label: 'property 4',
+            options: [
+              {
+                name: 'testOption1',
+                value: 1
+              },
+              {
+                name: 'testOption2',
+                value: 2
+              }
+            ]
+          }
         }
       ]
     };
