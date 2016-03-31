@@ -51,7 +51,7 @@ module.exports = function makeWebpackConfig () {
   } else if (ENV === 'dev') {
     config.output = {
       path: APP,
-      publicPath: 'http://localhost:8080/',
+      publicPath: 'http://localhost:8181/',
       filename: '[name].bundle.js',
       chunkFilename: '[name].bundle.js'
     };
